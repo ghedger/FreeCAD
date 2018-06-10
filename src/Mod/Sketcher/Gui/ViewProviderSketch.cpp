@@ -601,6 +601,11 @@ bool ViewProviderSketch::mouseButtonPressed(int Button, bool pressed, const SbVe
             switch (Mode) {
                 case STATUS_NONE:{
                     bool done=false;
+                    // TODO (GPH): This is where it would be prudent to
+                    // call out to a function which follows the ray all the
+                    // way through the intersecting items at this (x,y) point
+                    // in this sketch, and pop a menu.
+                    // See detectPreselection() for ideas.
                     if (edit->PreselectPoint != -1) {
                         //Base::Console().Log("start dragging, point:%d\n",this->DragPoint);
                         Mode = STATUS_SELECT_Point;
